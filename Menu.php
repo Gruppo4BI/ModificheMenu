@@ -1,6 +1,6 @@
 <?php
 session_start();
-// controllo se  stato impostato l id per evitare che accedano direttamente senza fare il login
+// controllo se Â stato impostato l id per evitare che accedano direttamente senza fare il login
 if( !isset($_SESSION['id']) )
 	header("Location: LOGIN2.php");
 ?>
@@ -41,11 +41,11 @@ $dati_tel=mysqli_fetch_assoc($result_tel);
 ?>
 
 <!-- sono classi predefinite, inverse vuol dire sfondo scuro
-	quella di default  chiara -->
+	quella di default Â chiara -->
 <nav class="navbar navbar-default">
   <div class="container-fluid">
   
-  <!-- questo  l header contiene gli elementi che devono essere visibili anche quando la barra  minimizzata per i display di piccole dimensioni -->
+  <!-- questo Â l header contiene gli elementi che devono essere visibili anche quando la barra Â minimizzata per i display di piccole dimensioni -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -79,7 +79,7 @@ $dati_tel=mysqli_fetch_assoc($result_tel);
 
 <?php 
 // mi permette di mostrare dei messaggi di errore o di successo di modifica, si riferisce alla pagina emodifica.php 
-if( isset($_GET['modifica']) ) // se modifica  settato entro nel if  e con uno switch distinguo i vari casi 
+if( isset($_GET['modifica']) ) // se modifica Â settato entro nel if  e con uno switch distinguo i vari casi 
 {
 	echo "<p id='box_modifica'>";
 	switch ($_GET['modifica'])
@@ -104,13 +104,13 @@ if( isset($_GET['modifica']) ) // se modifica  settato entro nel if  e con uno
     <div class="col-sm-2 sidenav hidden-xs" style="text-align: center; margin-left:20px">
       <h2 ><?php echo $dati['nome_azienda']?></h2><br/>
        <img src="logo.png">
-     <div class="container" style="text-align:right; width: 280px; margin-top:330px; ";"> 
+     <div class="container" style="text-align:right; width: auto; margin-top:330px; ";"> 
      		<a href="modificaW.php" class="btn btn-info" role="button">Modifica</a>
      		</div>
     </div>
     <br>
     <div class="col-sm-9">
-          <?php  // usiamo null perch� � un testo
+          <?php  // usiamo null perch  un testo
       if( !($dati[parlaci]==NULL) ){
       	echo " <div class='well'>
 		<h4> La nostra azienda </h4> <p>".$dati['parlaci']."</p></div>";
@@ -166,7 +166,7 @@ if( isset($_GET['modifica']) ) // se modifica  settato entro nel if  e con uno
         <div class="col-sm-4">
           <div class="well">
           <h4>Telefono</h4> 
- <?php echo  "<p>".$dati_tel['numero']."</p>"; // ottengo i dati dall array dati_tel che  stato creato precedentemente, usando come chiavi i nomi delle colonne nel db
+ <?php echo  "<p>".$dati_tel['numero']."</p>"; // ottengo i dati dall array dati_tel che Â stato creato precedentemente, usando come chiavi i nomi delle colonne nel db
 	 if( !($dati_tel['numero2']==0) ) // gli if mi permettono di non mostrare nulla nel caso questi campi non siano presnti nel db
 		echo "<h4> Telefono 2 </h4> <p>".$dati_tel['numero2']."</p>";
 	  if( !($dati_tel['fax']==0) )
