@@ -2,7 +2,7 @@
 session_start();
 // controllo se Â stato impostato l id per evitare che accedano direttamente senza fare il login
 if( !isset($_SESSION['id']) )
-	header("Location: LOGIN2.php");
+	header("Location: LOGIN2.php"); // se non è presente id, risulta non connesso e quindi verrà rimandato alla pagina di login
 ?>
 
 <!DOCTYPE html>
