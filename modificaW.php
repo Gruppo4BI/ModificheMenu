@@ -26,9 +26,9 @@ $dati = $result->fetch_assoc();
 $SQLcateg ="select categoria from categoria where idCat='".$dati['idCat']."'";
 $result_cat = $conn->query($SQLcateg);
 $dati_cat=$result_cat->fetch_assoc();
-// il nome sarˆ memorizzato nella variabile categoria
+// il nome sarË† memorizzato nella variabile categoria
 $categoria=$dati_cat['categoria'];
-// questa  un altra query che mi serve per pooi avere tutta la lista di categorie senza quella che � stata selezionata precedentemente
+// questa Â un altra query che mi serve per pooi avere tutta la lista di categorie senza quella che  stata selezionata precedentemente
 $comandoSQL ="select categoria from categoria where categoria !='".$categoria."'";
 
 		$result=mysqli_query($conn,$comandoSQL); 
@@ -39,11 +39,11 @@ $result_tel = $conn->query($SQLtel);
 $dati_tel=$result_tel->fetch_assoc();
 ?>
 <!-- sono classi predefinite, inverse vuol dire sfondo scuro
-	quella di default  chiara -->
+	quella di default Â chiara -->
 <nav class="navbar navbar-default">
   <div class="container-fluid">
   
-  <!-- questo  l header contiene gli elementi che devono essere visibili anche quando la barra  minimizzata per i display di piccole dimensioni -->
+  <!-- questo Â l header contiene gli elementi che devono essere visibili anche quando la barra Â minimizzata per i display di piccole dimensioni -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -51,7 +51,7 @@ $dati_tel=$result_tel->fetch_assoc();
         <span class="icon-bar"></span>   
         <!-- Ciascuno di questi disegna una lineetta sul pulsante quando si minimizza la pagina -->                     
       </button>
-      <a class="navbar-brand">Borsa delle Idee</a>
+      <a class="navbar-brand" href=" ">Borsa delle Idee</a>
     </div>
  <!--  elementi della barra -->
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -102,7 +102,7 @@ if( isset($_GET['errore']) )
 		echo "</div>";
 }
 ?> 
-           <!-- Questo  un form con tutti i dati che sarˆ possibile modificare, utilizzeremo il metodo post -->
+           <!-- Questo Â un form con tutti i dati che sarË† possibile modificare, utilizzeremo il metodo post -->
   <form method="post" name="registra" action="emodifica.php" id="registra">
  
   <fieldset class="form-group">
@@ -172,7 +172,7 @@ if( isset($_GET['errore']) )
     <textarea class="form-control" id="parlaci" name="parlaci" rows="3"> <?php echo $dati["parlaci"]; ?> </textarea>
   </fieldset>
   
-<!-- questo potrà essere aggiunto dopo per caricare l immagine dell azienda 
+<!-- questo potrÃ  essere aggiunto dopo per caricare l immagine dell azienda 
   <fieldset class="form-group">
     <label for="exampleInputFile">File input</label>
     <input type="file" class="form-control-file" id="exampleInputFile">
